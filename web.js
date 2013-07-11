@@ -2,15 +2,15 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var fs =require('fs')
-var data
-var err
+var fs =require('fs');
+var data=new Buffer(256);
+var err;
 
 app.get('/', function(request, response) {
-data=fs.readFileSync("index.html")
+data=fs.readFileSync("index.html");
 
 
-response.send(data.toString())
+response.send(data.toString());
 }
 
 
