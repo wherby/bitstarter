@@ -11,7 +11,7 @@ data=fs.readFileSync("index.html");
 
 
 response.send(data.toString());
-}
+});
 
 
 var port = process.env.PORT || 5000;
